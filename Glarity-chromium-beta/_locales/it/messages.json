@@ -1,0 +1,527 @@
+{
+    "appName": {
+        "message": "ChatGPT Glarity-Sommario YouTube e Google"
+    },
+    "appDesc": {
+        "message": "Sommari dei risultati di ricerca di YouTube e Google con ChatGPT. Glarity ti consente di riassumere facilmente qualsiasi pagina web."
+    },
+    "option": {
+        "message": "Opzioni"
+    },
+    "trigger_mode": {
+        "message": "Modalità di attivazione"
+    },
+    "always": {
+        "message": "Sempre"
+    },
+    "always_tip": {
+        "message": "ChatGPT viene interrogato ad ogni ricerca"
+    },
+    "manually": {
+        "message": "Manualmente"
+    },
+    "manually_tip": {
+        "message": "ChatGPT viene interrogato quando si fa clic manualmente su un pulsante"
+    },
+    "language": {
+        "message": "Lingua"
+    },
+    "language_tip": {
+        "message": "La lingua utilizzata nella risposta di ChatGPT. L'opzione Auto è consigliata."
+    },
+    "aiprovider": {
+        "message": "Provider IA"
+    },
+    "gpt3_5tip": {
+        "message": "GPT-3.5 è illimitato per gli utenti gratuiti e Plus."
+    },
+    "gpt4_tip": {
+        "message": "GPT-4 è per gli utenti Plus e ha una quota molto limitata."
+    },
+    "open_ai_tip": {
+        "message": "API ufficiale di OpenAI, più stabile, con addebito in base all'utilizzo"
+    },
+    "save": {
+        "message": "Salva"
+    },
+    "customize_prompt": {
+        "message": "Personalizza Prompt per il Riassunto"
+    },
+    "use_default": {
+        "message": "Usa predefinito"
+    },
+    "enable_disable_glarity": {
+        "message": "Abilita/Disabilita Glarity"
+    },
+    "enable_disable_tip": {
+        "message": "È possibile abilitare/disabilitare il Riassunto di Glarity nel seguente sito web."
+    },
+    "select_all": {
+        "message": "Seleziona tutto/Inverti"
+    },
+    "page_summary": {
+        "message": "Sommario della pagina"
+    },
+    "show_icon": {
+        "message": "Mostra icona Glarity"
+    },
+    "disable_icon": {
+        "message": "Disabilita icona Glarity \n"
+    },
+    "show_icon_tip": {
+        "message": "Una volta nascosta, l'icona Glarity non apparirà più sulla pagina. Tuttavia, è possibile aprire il sommario della pagina facendo clic sull'icona dell'estensione del browser."
+    },
+    "whitelist_sites": {
+        "message": "Siti in lista bianca"
+    },
+    "whitelist_sites_tip": {
+        "message": "Mostra solo l'icona Glarity su questi siti (un URL per riga)."
+    },
+    "blacklist_sites": {
+        "message": "Siti in lista nera"
+    },
+    "blacklist_sites_tip": {
+        "message": "Non mostrare l'icona Glarity su questi siti (un URL per riga)."
+    },
+    "login_tip": {
+        "message": "Effettua il login e supera il controllo di Cloudflare su {{site}}"
+    },
+    "summary": {
+        "message": "Riassunto"
+    },
+    "create_tweet": {
+        "message": "Crea un tweet"
+    },
+    "explain": {
+        "message": "Spiega"
+    },
+    "translation": {
+        "message": "Traduzione"
+    },
+    "q_and_a": {
+        "message": "Q&A"
+    },
+    "important": {
+        "message": "Importante"
+    },
+    "theme": {
+        "message": "Tema"
+    },
+    "auto": {
+        "message": "Automatico"
+    },
+    "light": {
+        "message": "Chiaro"
+    },
+    "dark": {
+        "message": "Scuro"
+    },
+    "example_prompts": {
+        "message": "Esempi di prompt:"
+    },
+    "summarize_above": {
+        "message": "Sommari degli evidenziati contenuti sopra."
+    },
+    "extract_gist": {
+        "message": "Estrai il succo dei contenuti sopra."
+    },
+    "what_above": {
+        "message": "Quali sono le informazioni chiave dai contenuti sopra?"
+    },
+    "comment_summary": {
+        "message": "Sommario dei commenti"
+    },
+    "summary_support": {
+        "message": "Sommario del supporto per i prodotti Amazon e dei commenti dei video di YouTube."
+    },
+    "option_general": {
+        "message": "Generale"
+    },
+    "popup_summary": {
+        "message": "Sommario a comparsa"
+    },
+    "popup_summary_title": {
+        "message": "Quando seleziono una parola o una frase:"
+    },
+    "popup_summary_tip": {
+        "message": "Mostra un'icona su cui posso fare clic per mostrare un sommario a comparsa."
+    },
+    "disable_popup_summary": {
+        "message": "Non mostrare l'icona o il sommario a comparsa."
+    },
+    "summary_full_title": {
+        "message": "Sommario del contenuto completo"
+    },
+    "summary_full": {
+        "message": "Sommario del contenuto completo, ma consumerà una quota maggiore della tua chiave."
+    },
+    "summary_brief": {
+        "message": "Sommario breve: Usa meno token, ma potrebbero esserci omissioni nel sommario."
+    },
+    "here": {
+        "message": "Qui"
+    },
+    "retry": {
+        "message": "Riprova"
+    },
+    "ask": {
+        "message": "Chiedi"
+    },
+    "generating": {
+        "message": "Generazione in corso..."
+    },
+    "thinking": {
+        "message": "Pensando..."
+    },
+    "no_transcription": {
+        "message": "Trascrizione non disponibile..."
+    },
+    "use_openai_tip": {
+        "message": "Nota: Utilizzare il modello di chiave dell'API di OpenAI fornirà risposte più accurate."
+    },
+    "no_results": {
+        "message": "Nessun risultato."
+    },
+    "i_ready": {
+        "message": "Sono pronto!"
+    },
+    "keep_this_tip": {
+        "message": "Tieni questa scheda aperta per rendere ChatGPT più stabile."
+    },
+    "login_chatGpt_tip": {
+        "message": "Accedi all'applicazione web di ChatGPT per utilizzare la sintesi di Glarity."
+    },
+    "disable_pop_tip": {
+        "message": "Vuoi davvero disattivare il riepilogo a comparsa?"
+    },
+    "page_not_supported": {
+        "message": "Spiacenti, questa pagina non è supportata."
+    },
+    "content": {
+        "message": "Contenuto"
+    },
+    "ask_chatGPT": {
+        "message": "Genera un riassunto"
+    },
+    "pop_tip": {
+        "message": "Puoi attivarlo nelle opzioni - Riepilogo a comparsa."
+    },
+    "asking_tip": {
+        "message": "Glarity genera domande relative alle parole chiave per voi"
+    },
+    "data_error": {
+        "message": "Errore dati"
+    },
+    "gpt_401": {
+        "message": "Impossibile caricare la risposta, controlla la chiave API."
+    },
+    "chat_tip": {
+        "message": "Nota: la funzione ask può consumare più crediti Key~"
+    },
+    "three_point": {
+        "message": "3 punti chiave"
+    },
+    "ask_page_placeholder": {
+        "message": "Chiedi a Glarity qualsiasi cosa desideri"
+    },
+    "ask_video_placeholder": {
+        "message": "Chiedi a Glarity qualsiasi cosa desideri"
+    },
+    "ask_docment_placeholder": {
+        "message": "Chiedi a Glarity qualsiasi cosa desideri"
+    },
+    "stop": {
+        "message": "Stop"
+    },
+    "comment_summary_tip": {
+        "message": "Riepilogo del supporto per i prodotti Amazon e i commenti ai video di YouTube."
+    },
+    "faq_about": {
+        "message": "Domande frequenti su questo video"
+    },
+    "ai_chapter": {
+        "message": "Capitolo sull'IA"
+    },
+    "beta": {
+        "message": "beta"
+    },
+    "how_to_use": {
+        "message": "Come utilizzare il riepilogo di Glarity e utilizzarlo ovunque"
+    },
+    "three_ways_to_access": {
+        "message": "Per assicurarti che il riepilogo di Glarity sia accessibile a tutti, offriamo 3 modi per accedere a ChatGPT e utilizzarlo ovunque."
+    },
+    "have_chatpgt_account": {
+        "message": "Quando hai un account chatPGT"
+    },
+    "chatgpt_use_desc": {
+        "message": "Devi rimanere connesso al tuo account ChatGPT sul sito web. La stabilità potrebbe essere inconsistente sia per gli utenti Plus che per gli utenti gratuiti a causa delle restrizioni di OpenAI. È consigliato per gli utenti chatgpt plus."
+    },
+    "have_openai_key": {
+        "message": "Per gli sviluppatori con chiave API"
+    },
+    "openai_use_desc": {
+        "message": "L'API ufficiale di OpenAI è più stabile e le tariffe sono basate sull'utilizzo. Segui la guida per ottenere la chiave API."
+    },
+    "have_azure_key": {
+        "message": "Per gli sviluppatori con chiave API Azure"
+    },
+    "azure_use_desc": {
+        "message": "Un ingegnere di ricerca e sviluppo che utilizza i servizi Azure OpenAI può beneficiare di un servizio più stabile."
+    },
+    "more_ways": {
+        "message": "Altri modi+"
+    },
+    "chatgpt_default_model": {
+        "message": "Predefinito"
+    },
+    "chatgpt_default_desc": {
+        "message": "Il predefinito è illimitato per gli utenti gratuiti e Plus."
+    },
+    "chatgpt_gpt4_model": {
+        "message": "GPT-4"
+    },
+    "chatgpt_gpt4_desc": {
+        "message": "GPT-4 è per gli utenti Plus e ha una quota molto limitata."
+    },
+    "changes_saved": {
+        "message": "Modifiche salvate"
+    },
+    "token_exceeds_limit_toast": {
+        "message": "Spiacenti, il prompt supera il limite, prova a tradurlo in inglese e salvarlo o a ridurre il numero di parole."
+    },
+    "guide_title": {
+        "message": "Benvenuto in Glarity"
+    },
+    "guide_desc": {
+        "message": "Inizia a sperimentare la lettura efficiente del riepilogo di Glarity~~"
+    },
+    "google_search": {
+        "message": "Ricerca su Google"
+    },
+    "youtube_video": {
+        "message": "Video di YouTube"
+    },
+    "translation_languages": {
+        "message": "Lingue di traduzione"
+    },
+    "recently_used": {
+        "message": "Utilizzati di recente"
+    },
+    "copy_success": {
+        "message": "Copia effettuata con successo"
+    },
+    "free_queries": {
+        "message": "$count$ Query gratuite",
+        "placeholders": {
+            "count": {
+                "content": "$1",
+                "example": "1"
+            }
+        }
+    },
+    "enter_openai_key_toast": {
+        "message": "Inserisci la tua chiave API di OpenAI"
+    },
+    "free_quota_exhausted": {
+        "message": "La quota gratuita è stata esaurita"
+    },
+    "login_chatgpt_and_refresh_page": {
+        "message": "Effettua il login su ChatGPT e aggiorna questa pagina"
+    },
+    "goto_chatgpt": {
+        "message": "Vai a ChatGPT"
+    },
+    "use_openai_enhanced": {
+        "message": "Utilizzo della chiave API di OpenAI per risultati di sintesi avanzati"
+    },
+    "find_create_openai_key": {
+        "message": "Puoi trovare o creare la tua chiave API qui"
+    },
+    "change_openai_api": {
+        "message": "Se ciò continua a accadere, cambia il provider Al in OpenAl API nelle opzioni dell'estensione."
+    },
+    "goto_options": {
+        "message": "Vai a modifica opzioni"
+    },
+    "ai_not_responding": {
+        "message": "IA non risponde"
+    },
+    "select_valid_model": {
+        "message": "Seleziona un modello valido"
+    },
+    "enter_azure_key": {
+        "message": "Inserisci la tua chiave API di Azure"
+    },
+    "enter_azure_endpoint": {
+        "message": "Inserisci il tuo endpoint di Azure"
+    },
+    "enter_azure_name": {
+        "message": "Inserisci il nome del tuo deployment di Azure"
+    },
+    "enter_claude_key": {
+        "message": "Inserisci la tua chiave API di Claude"
+    },
+    "transcript": {
+        "message": "Trascrizione"
+    },
+    "or": {
+        "message": "Oppure"
+    },
+    "back": {
+        "message": "Indietro"
+    },
+    "aiAskYoutubeTip": {
+        "message": "Glarity prevede le domande che potrebbero interessarti"
+    },
+    "clickOpen": {
+    "message": "Clicca per espandere"
+      },
+      "clickClose": {
+        "message": "Clicca per ridurre"
+      },
+      "tips": {
+        "message": "suggerimenti"
+      },
+      "confirm": {
+        "message": "Conferma"
+      },
+      "cancel": {
+        "message": "Annulla"
+      },
+    "have_glarity": {
+    "message": "Consigliato per tutti gli utenti"
+    },
+    "glarity_use_desc": {
+    "message": "Glarity utilizza più modelli di intelligenza artificiale per offrirti servizi assistiti dall'IA superiori."
+    },
+    "glarity_not_use_desc": {
+    "message": "Glarity sfrutta diversi modelli di intelligenza artificiale per servizi avanzati assistiti dall'IA. Goditi $size$ token gratuiti al mese, dando a tutti il potere dell'IA.<br/> <a href='$link$' target='_blank' rel='noopener noreferrer'>Passa a $plan$ </a> per una maggiore quantità di token e funzioni premium.",
+    "placeholders": {
+        "size": {
+        "content": "$1",
+        "example": "1"
+        },
+        "plan": {
+        "content": "$2",
+        "example": "pro"
+        },
+        "link": {
+        "content": "$3",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "my_account": {
+    "message": "Il mio account"
+    },
+    "sign_out": {
+    "message": "Esci"
+    },
+    "sign_in": {
+    "message": "Accedi"
+    },
+    "upgrade_now": {
+    "message": "Esegui l'upgrade ora"
+    },
+    "go_plus": {
+    "message": "Vai Plus"
+    },
+    "basic": {
+    "message": "Base"
+    },
+    "pro": {
+    "message": "Pro"
+    },
+    "plus": {
+    "message": "Plus"
+    },
+    "unlimited": {
+    "message": "Illimitato"
+    },
+    "glarity_words_size": {
+    "message": "$size$ k token disponibili",
+    "placeholders": {
+        "size": {
+        "content": "$1",
+        "example": "1"
+        }
+    }
+    },
+    "glarity_unlimited_words": {
+    "message": "Token illimitati"
+    },
+    "settings": {
+    "message": "Impostazioni"
+    },
+    "support": {
+    "message": "Supporto"
+    },
+    "login": {
+    "message": "Accedi"
+    },
+    "log_out": {
+    "message": "Esci"
+    },
+    "subscribe": {
+    "message": "Iscriviti"
+    },
+    "hasLogin_isFree_title": {
+    "message": "Il tuo piano gratuito è stato utilizzato completamente"
+    },
+    "hasLogin_isFree_text": {
+    "message": "Esegui l'upgrade del tuo piano per ottenere ulteriori crediti"
+    },
+    "hasLogin_noFree_title": {
+    "message": "L'utilizzo del tuo piano è stato completamente esaurito"
+    },
+    "hasLogin_noFree_text": {
+    "message": "Esegui l'upgrade del tuo piano per ottenere ulteriori crediti"
+    },
+    "noLogin_title": {
+    "message": "La quota gratuita è stata utilizzata completamente"
+    },
+    "noLogin_text": {
+    "message": "Effettua l'accesso per continuare a godere di Glarity gratuitamente"
+    },
+    "chat_quota_used_up_not_login": {
+    "message": "Il limite di utilizzo del tuo piano è stato raggiunto. <br /> <a href='$link$'>Accedi</a> a Glarity per continuare a godere della tua esperienza gratuita",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "chat_quota_used_up_free_plan": {
+    "message": "L'uso del tuo piano gratuito è stato esaurito. <br /> <a href='$link$'>Esegui l'upgrade del tuo piano</a> ora per ottenere più crediti",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "chat_quota_used_up_limited_plan": {
+    "message": "L'utilizzo del tuo piano è stato esaurito. <br /> <a href='$link$'>Esegui l'upgrade del tuo piano</a> ora per accedere a più crediti",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "more": {
+    "message": "Altro"
+    },
+    "is_login_expires_text": {
+    "message": "Inizia effettuando l'accesso a Glarity!"
+    },
+    "is_login_expires_tip": {
+    "message": "Con un account ChatGPT, puoi <a id='glarity-error-guide-to-options'>passare alla modalità ChatGPT.</a>"
+    },
+    "sign_in_now": {
+        "message": "Accedi ora"
+    }
+
+}

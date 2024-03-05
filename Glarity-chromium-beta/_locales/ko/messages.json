@@ -1,0 +1,526 @@
+{
+    "appName": {
+        "message": "ChatGPT Glarity-YouTube 및 Google 요약"
+    },
+    "appDesc": {
+        "message": "ChatGPT를 사용하여 YouTube 및 Google 검색 결과의 요약을 제공합니다. Glarity를 사용하면 웹 페이지의 요약을 쉽게 작성할 수 있습니다."
+    },
+    "option": {
+        "message": "옵션"
+    },
+    "trigger_mode": {
+        "message": "트리거 모드"
+    },
+    "always": {
+        "message": "항상"
+    },
+    "always_tip": {
+        "message": "검색할 때마다 ChatGPT에 쿼리를 보냅니다"
+    },
+    "manually": {
+        "message": "수동으로"
+    },
+    "manually_tip": {
+        "message": "버튼을 수동으로 클릭할 때 ChatGPT에 쿼리를 보냅니다"
+    },
+    "language": {
+        "message": "언어"
+    },
+    "language_tip": {
+        "message": "ChatGPT 응답에 사용되는 언어입니다. 자동 설정을 권장합니다."
+    },
+    "aiprovider": {
+        "message": "AI 공급업체"
+    },
+    "gpt3_5tip": {
+        "message": "무료 및 플러스 사용자에게는 무제한 GPT-3.5가 제공됩니다."
+    },
+    "gpt4_tip": {
+        "message": "플러스 사용자를 위한 GPT-4로 매우 제한된 할당량이 제공됩니다."
+    },
+    "open_ai_tip": {
+        "message": "OpenAI 공식 API로 더 안정적이며 사용량에 따라 요금이 부과됩니다."
+    },
+    "save": {
+        "message": "저장"
+    },
+    "customize_prompt": {
+        "message": "요약을 위한 프롬프트 사용자 정의"
+    },
+    "use_default": {
+        "message": "기본값 사용"
+    },
+    "enable_disable_glarity": {
+        "message": "Glarity 활성화/비활성화"
+    },
+    "enable_disable_tip": {
+        "message": "다음 웹사이트에서 Glarity 요약을 활성화/비활성화할 수 있습니다."
+    },
+    "select_all": {
+        "message": "모두 선택 / 반전"
+    },
+    "page_summary": {
+        "message": "페이지 요약"
+    },
+    "show_icon": {
+        "message": "Glarity 아이콘 표시"
+    },
+    "disable_icon": {
+        "message": "Glarity 아이콘 비활성화\n"
+    },
+    "show_icon_tip": {
+        "message": "숨겨지면 Glarity 아이콘이 페이지에 더 이상 표시되지 않습니다. 그러나 브라우저 확장 프로그램 아이콘을 클릭하여 페이지 요약을 열 수 있습니다."
+    },
+    "whitelist_sites": {
+        "message": "허용 목록에 포함할 사이트"
+    },
+    "whitelist_sites_tip": {
+        "message": "이 사이트에서만 Glarity 아이콘을 표시합니다 (한 줄에 하나의 URL 입력)."
+    },
+    "blacklist_sites": {
+        "message": "차단 목록에 포함할 사이트"
+    },
+    "blacklist_sites_tip": {
+        "message": "이 사이트에서 Glarity 아이콘을 표시하지 않습니다 (한 줄에 하나의 URL 입력)."
+    },
+    "login_tip": {
+        "message": "{{site}}에서 로그인하고 Cloudflare 확인을 통과하십시오"
+    },
+    "summary": {
+        "message": "요약"
+    },
+    "create_tweet": {
+        "message": "트윗 작성"
+    },
+    "explain": {
+        "message": "설명"
+    },
+    "translation": {
+        "message": "번역"
+    },
+    "q_and_a": {
+        "message": "Q&A"
+    },
+    "important": {
+        "message": "중요"
+    },
+    "theme": {
+        "message": "테마"
+    },
+    "auto": {
+        "message": "자동"
+    },
+    "light": {
+        "message": "밝은"
+    },
+    "dark": {
+        "message": "어두운"
+    },
+    "example_prompts": {
+        "message": "예시 프롬프트:"
+    },
+    "summarize_above": {
+        "message": "위 내용을 요약합니다."
+    },
+    "extract_gist": {
+        "message": "위의 핵심 내용을 추출합니다."
+    },
+    "what_above": {
+        "message": "위의 주요 내용은 무엇인가요?"
+    },
+    "comment_summary": {
+        "message": "댓글 요약"
+    },
+    "summary_support": {
+        "message": "Amazon 제품과 YouTube 동영상 댓글에 대한 지원 요약"
+    },
+    "option_general": {
+        "message": "일반"
+    },
+    "popup_summary": {
+        "message": "팝업 요약"
+    },
+    "popup_summary_title": {
+        "message": "단어 또는 구를 선택하면:"
+    },
+    "popup_summary_tip": {
+        "message": "팝업을 표시할 수 있는 아이콘을 표시합니다."
+    },
+    "disable_popup_summary": {
+        "message": "아이콘 또는 팝업을 표시하지 않습니다."
+    },
+    "summary_full_title": {
+        "message": "전체 내용 요약"
+    },
+    "summary_full": {
+        "message": "전체 내용을 요약합니다. 그러나 키 할당량을 더 사용합니다."
+    },
+    "summary_brief": {
+        "message": "간단한 요약: 토큰을 적게 사용하지만 요약에 누락이 있을 수 있습니다."
+    },
+    "here": {
+        "message": "여기"
+    },
+    "retry": {
+        "message": "재시도"
+    },
+    "ask": {
+        "message": "질문"
+    },
+    "generating": {
+        "message": "생성 중..."
+    },
+    "thinking": {
+        "message": "생각 중..."
+    },
+    "no_transcription": {
+        "message": "사용 가능한 전사가 없습니다..."
+    },
+    "use_openai_tip": {
+        "message": "참고: OpenAI API 키 패턴을 사용하면 더 정확한 답변을 받을 수 있습니다."
+    },
+    "no_results": {
+        "message": "결과가 없습니다."
+    },
+    "i_ready": {
+        "message": "준비되었습니다!"
+    },
+    "keep_this_tip": {
+        "message": "ChatGPT를 더 안정적으로 사용하려면이 탭을 유지하십시오."
+    },
+    "login_chatGpt_tip": {
+        "message": "ChatGPT 웹 응용 프로그램에 로그인하여 Glarity 요약을 사용하십시오."
+    },
+    "disable_pop_tip": {
+        "message": "팝업 요약을 정말로 비활성화하시겠습니까?"
+    },
+    "page_not_supported": {
+        "message": "죄송합니다. 이 페이지는 지원되지 않습니다."
+    },
+    "content": {
+        "message": "콘텐츠"
+    },
+    "ask_chatGPT": {
+        "message": "요약 생성"
+    },
+    "pop_tip": {
+        "message": "옵션에서 팝업 요약을 켤 수 있습니다."
+    },
+    "asking_tip": {
+        "message": "Glarity는 키워드 관련 질문을 생성합니다."
+    },
+    "data_error": {
+        "message": "데이터 오류"
+    },
+    "gpt_401": {
+        "message": "응답을 로드하지 못했습니다. API 키를 확인하십시오."
+    },
+    "chat_tip": {
+        "message": "참고: 쿼리 기능은 더 많은 키 할당량을 소비할 수 있습니다~"
+    },
+    "three_point": {
+        "message": "3개의 핵심 내용"
+    },
+    "ask_page_placeholder": {
+        "message": "Glarity에게 원하는 것을 무엇이든 물어보세요"
+    },
+    "ask_video_placeholder": {
+        "message": "Glarity에게 원하는 것을 무엇이든 물어보세요"
+    },
+    "ask_docment_placeholder": {
+        "message": "Glarity에게 원하는 것을 무엇이든 물어보세요"
+    },
+    "stop": {
+        "message": "중지"
+    },
+    "comment_summary_tip": {
+        "message": "Amazon 제품 및 YouTube 비디오 댓글에 대한 요약"
+    },
+    "faq_about": {
+        "message": "이 비디오에 대한 FAQ"
+    },
+    "ai_chapter": {
+        "message": "인공지능 챕터"
+    },
+    "beta": {
+        "message": "베타"
+    },
+    "how_to_use": {
+        "message": "Glarity 요약 사용 방법 및 어디에서나 사용"
+    },
+    "three_ways_to_access": {
+        "message": "모든 사람이 Glarity 요약에 접근하고 어디에서나 사용할 수 있도록, ChatGPT에 접근하는 3가지 방법을 제공합니다."
+    },
+    "have_chatpgt_account": {
+        "message": "ChatPGT 계정이 있는 경우"
+    },
+    "chatgpt_use_desc": {
+        "message": "웹 사이트에서 ChatGPT 계정에 로그인한 상태를 유지해야 합니다. OpenAI의 제한으로 인해 Plus 사용자와 무료 사용자 모두 안정성이 일관되지 않을 수 있습니다. chatgpt plus 사용자에게 권장됩니다."
+    },
+    "have_openai_key": {
+        "message": "API 키가 있는 개발자를 위한"
+    },
+    "openai_use_desc": {
+        "message": "공식 OpenAI API는 안정적이며 사용량에 따라 요금이 부과됩니다. API 키를 얻으려면 가이드를 따르세요."
+    },
+    "have_azure_key": {
+        "message": "Azure API 키가 있는 개발자를 위한"
+    },
+    "azure_use_desc": {
+        "message": "Azure OpenAI 서비스를 활용하는 연구 및 개발 엔지니어는 더 안정적인 서비스를 받을 수 있습니다."
+    },
+    "more_ways": {
+        "message": "더 많은 방법+"
+    },
+    "chatgpt_default_model": {
+        "message": "기본값"
+    },
+    "chatgpt_default_desc": {
+        "message": "무료 및 Plus 사용자의 경우 기본값은 무제한입니다."
+    },
+    "chatgpt_gpt4_model": {
+        "message": "GPT-4"
+    },
+    "chatgpt_gpt4_desc": {
+        "message": "GPT-4는 Plus 사용자를 위한 제한된 할당량이 있습니다."
+    },
+    "changes_saved": {
+        "message": "변경 사항 저장됨"
+    },
+    "token_exceeds_limit_toast": {
+        "message": "죄송합니다. 프롬프트가 제한을 초과했습니다. 영어로 번역하여 저장하거나 단어 수를 줄여보세요."
+    },
+    "guide_title": {
+        "message": "Glarity에 오신 것을 환영합니다."
+    },
+    "guide_desc": {
+        "message": "Glarity 요약의 효율적인 읽기를 경험해보세요~~"
+    },
+    "google_search": {
+        "message": "Google 검색"
+    },
+    "youtube_video": {
+        "message": "YouTube 비디오"
+    },
+    "translation_languages": {
+        "message": "번역 언어"
+    },
+    "recently_used": {
+        "message": "최근에 사용된"
+    },
+    "copy_success": {
+        "message": "복사 성공"
+    },
+    "free_queries": {
+        "message": "$count$ 무료 쿼리",
+        "placeholders": {
+            "count": {
+                "content": "$1",
+                "example": "1"
+            }
+        }
+    },
+    "enter_openai_key_toast": {
+        "message": "OpenAI API 키를 입력해주세요."
+    },
+    "free_quota_exhausted": {
+        "message": "무료 할당량을 모두 사용했습니다."
+    },
+    "login_chatgpt_and_refresh_page": {
+        "message": "ChatGPT에 로그인하고 이 페이지를 새로 고침해주세요."
+    },
+    "goto_chatgpt": {
+        "message": "ChatGPT로 이동"
+    },
+    "use_openai_enhanced": {
+        "message": "향상된 요약 결과를 위해 OpenAI API 키 사용"
+    },
+    "find_create_openai_key": {
+        "message": "여기에서 API 키를 찾거나 생성할 수 있습니다."
+    },
+    "change_openai_api": {
+        "message": "계속해서 발생하는 경우 확장 프로그램 옵션에서 Al 공급자를 OpenAl API로 변경하세요."
+    },
+    "goto_options": {
+        "message": "옵션 편집으로 이동"
+    },
+    "ai_not_responding": {
+        "message": "AI가 응답하지 않습니다."
+    },
+    "select_valid_model": {
+        "message": "유효한 모델을 선택하십시오."
+    },
+    "enter_azure_key": {
+        "message": "Azure API 키를 입력해주세요."
+    },
+    "enter_azure_endpoint": {
+        "message": "Azure 엔드포인트를 입력해주세요."
+    },
+    "enter_azure_name": {
+        "message": "Azure 배포 이름을 입력해주세요."
+    },
+    "enter_claude_key": {
+        "message": "Claude API 키를 입력해주세요."
+    },
+    "transcript": {
+        "message": "트랜스크립트"
+    },
+    "or": {
+        "message": "또는"
+    },
+    "back": {
+        "message": "뒤쪽에"
+    },
+    "aiAskYoutubeTip": {
+        "message": "Glarity는 사용자가 관심을 가질 만한 질문을 예측합니다."
+    },
+      "clickOpen": {
+    "message": "클릭하여 확장"
+      },
+      "clickClose": {
+        "message": "클릭하여 축소"
+      },
+      "tips": {
+        "message": "팁"
+      },
+      "confirm": {
+        "message": "확인"
+      },
+      "cancel": {
+        "message": "취소"
+      },
+    "have_glarity": {
+        "message": "모든 사용자에게 추천됩니다"
+    },
+    "glarity_use_desc": {
+        "message": "Glarity는 여러 AI 모델을 활용하여 보다 우수한 AI 보조 서비스를 제공합니다."
+    },
+    "glarity_not_use_desc": {
+        "message": "Glarity는 다양한 AI 모델을 활용하여 고급 AI 지원 서비스를 제공합니다. 매월 $size$ 개의 무료 토큰을 즐기고, 모든 사람을 AI의 힘으로 향상시킵니다.<br/> <a href='$link$' target='_blank' rel='noopener noreferrer'>$plan$로 업그레이드 </a>하여 더 많은 토큰 할당량 및 프리미엄 기능을 이용하세요.",
+        "placeholders": {
+        "size": {
+            "content": "$1",
+            "example": "1"
+        },
+        "plan": {
+            "content": "$2",
+            "example": "pro"
+        },
+        "link": {
+            "content": "$3",
+            "example": "https://glarity.com"
+        }
+        }
+    },
+    "my_account": {
+        "message": "내 계정"
+    },
+    "sign_out": {
+        "message": "로그아웃"
+    },
+    "sign_in": {
+        "message": "로그인"
+    },
+    "upgrade_now": {
+        "message": "지금 업그레이드하십시오"
+    },
+    "go_plus": {
+        "message": "Plus로 업그레이드"
+    },
+    "basic": {
+        "message": "기초"
+    },
+    "pro": {
+        "message": "전문가"
+    },
+    "plus": {
+        "message": "플러스"
+    },
+    "unlimited": {
+        "message": "제한 없음"
+    },
+    "glarity_words_size": {
+        "message": "$size$ k 토큰 사용 가능",
+        "placeholders": {
+        "size": {
+            "content": "$1",
+            "example": "1"
+        }
+        }
+    },
+    "glarity_unlimited_words": {
+        "message": "제한 없는 토큰"
+    },
+    "settings": {
+        "message": "설정"
+    },
+    "support": {
+        "message": "지원"
+    },
+    "login": {
+        "message": "로그인"
+    },
+    "log_out": {
+        "message": "로그아웃"
+    },
+    "subscribe": {
+        "message": "구독하기"
+    },
+    "hasLogin_isFree_title": {
+        "message": "무료 플랜 사용량을 모두 사용하였습니다"
+    },
+    "hasLogin_isFree_text": {
+        "message": "추가 크레딧을 위해 플랜을 업그레이드 하세요"
+    },
+    "hasLogin_noFree_title": {
+        "message": "플랜 사용량이 모두 소진되었습니다"
+    },
+    "hasLogin_noFree_text": {
+        "message": "추가 크레딧을 얻기 위해 플랜을 업그레이드 하세요"
+    },
+    "noLogin_title": {
+        "message": "무료 할당량이 모두 소진되었습니다"
+    },
+    "noLogin_text": {
+        "message": "로그인하여 Glarity를 계속 무료로 사용하세요"
+    },
+    "chat_quota_used_up_not_login": {
+        "message": "플랜 사용 한도가 벌써 소진되었습니다. <br /> <a href='$link$'>로그인</a>하여 Glarity의 무료 경험을 계속 즐기세요",
+        "placeholders": {
+        "link": {
+            "content": "$1",
+            "example": "https://glarity.com"
+        }
+        }
+    },
+    "chat_quota_used_up_free_plan": {
+        "message": "무료 플랜 사용량이 모두 소진되었습니다. <br /> <a href='$link$'>플랜을 바로 업그레이드</a>해서 더 많은 크레딧을 누리세요",
+        "placeholders": {
+        "link": {
+            "content": "$1",
+            "example": "https://glarity.com"
+        }
+        }
+    },
+    "chat_quota_used_up_limited_plan": {
+        "message": "플랜 사용량이 모두 소진되었습니다. <br /> <a href='$link$'>플랜을 확장하기 위해</a> 지금 바로 업그레이드 하세요",
+        "placeholders": {
+        "link": {
+            "content": "$1",
+            "example": "https://glarity.com"
+        }
+        }
+    },
+    "more": {
+        "message": "더 보기"
+    },
+    "is_login_expires_text": {
+        "message": "Glarity에 로그인하여 시작하세요!"
+    },
+    "is_login_expires_tip": {
+        "message": "ChatGPT 계정을 가지고 있으면 <a id='glarity-error-guide-to-options'>ChatGPT 모드로 전환</a>할 수 있습니다."
+    },
+    "sign_in_now": {
+        "message": "지금 로그인하십시오"
+    }
+}

@@ -1,0 +1,527 @@
+{
+    "appName": {
+        "message": "Glarity -利用ChatGPT4生成摘要，支持Youtube视频和谷歌（免费无广告）"
+    },
+    "appDesc": {
+        "message": "Glarity Summary 利用ChatGPT4实现快速为谷歌搜索和YouTube视频等内容生成摘要。Glarity支持为任意网页生成摘要总结。"
+    },
+    "option": {
+        "message": "选项"
+    },
+    "trigger_mode": {
+        "message": "触发模式"
+    },
+    "always": {
+        "message": "自动"
+    },
+    "always_tip": {
+        "message": "每次搜索都会生成总结"
+    },
+    "manually": {
+        "message": "手动"
+    },
+    "manually_tip": {
+        "message": "手动点击按钮时生成总结"
+    },
+    "language": {
+        "message": "语言"
+    },
+    "language_tip": {
+        "message": "总结内容使用的语言。"
+    },
+    "aiprovider": {
+        "message": "AI提供商"
+    },
+    "gpt3_5tip": {
+        "message": "GPT-3.5对于免费和Plus用户没有限制。"
+    },
+    "gpt4_tip": {
+        "message": "GPT-4适用于Plus用户，配额非常有限。"
+    },
+    "open_ai_tip": {
+        "message": "OpenAI官方API，更加稳定，按使用量计费。"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "customize_prompt": {
+        "message": "自定义摘要指令"
+    },
+    "use_default": {
+        "message": "使用默认值"
+    },
+    "enable_disable_glarity": {
+        "message": "启用/禁用Glarity"
+    },
+    "enable_disable_tip": {
+        "message": "您可以在以下网站上启用/禁用Glarity摘要。"
+    },
+    "select_all": {
+        "message": "全选/反选"
+    },
+    "page_summary": {
+        "message": "总结页面"
+    },
+    "show_icon": {
+        "message": "显示Glarity图标"
+    },
+    "disable_icon": {
+        "message": "禁用Glarity图标\n"
+    },
+    "show_icon_tip": {
+        "message": "一旦隐藏，Glarity图标将不再显示在页面上。当然，您可以通过点击浏览器扩展图标来激活摘要功能。"
+    },
+    "whitelist_sites": {
+        "message": "白名单网站"
+    },
+    "whitelist_sites_tip": {
+        "message": "仅在这些网站上显示Glarity图标（每行一个URL）。"
+    },
+    "blacklist_sites": {
+        "message": "黑名单网站"
+    },
+    "blacklist_sites_tip": {
+        "message": "在这些网站上不显示Glarity图标（每行一个URL）。"
+    },
+    "login_tip": {
+        "message": "请登录并通过{{site}}的Cloudflare验证"
+    },
+    "summary": {
+        "message": "摘要"
+    },
+    "create_tweet": {
+        "message": "创建推文"
+    },
+    "explain": {
+        "message": "解释"
+    },
+    "translation": {
+        "message": "翻译"
+    },
+    "q_and_a": {
+        "message": "问答"
+    },
+    "important": {
+        "message": "重要"
+    },
+    "theme": {
+        "message": "主题"
+    },
+    "auto": {
+        "message": "自动"
+    },
+    "light": {
+        "message": "浅色"
+    },
+    "dark": {
+        "message": "深色"
+    },
+    "example_prompts": {
+        "message": "示例指令："
+    },
+    "summarize_above": {
+        "message": "总结上述内容要点。"
+    },
+    "extract_gist": {
+        "message": "提取上述内容的要点。"
+    },
+    "what_above": {
+        "message": "上述内容的主要要点是什么？"
+    },
+    "comment_summary": {
+        "message": "总结评论"
+    },
+    "summary_support": {
+        "message": "支持总结亚马逊产品和YouTube视频评论。"
+    },
+    "option_general": {
+        "message": "通用"
+    },
+    "popup_summary": {
+        "message": "划词菜单"
+    },
+    "popup_summary_title": {
+        "message": "当我选中一个单词或短语时："
+    },
+    "popup_summary_tip": {
+        "message": "单击图标显示总结窗口"
+    },
+    "disable_popup_summary": {
+        "message": "不显示图标或弹窗。"
+    },
+    "summary_full_title": {
+        "message": "全文内容总结"
+    },
+    "summary_full": {
+        "message": "对全文进行总结，然而会消耗更多的Key额度。"
+    },
+    "summary_brief": {
+        "message": "简要总结：消耗更少的Token，然而总结内容可能会有遗漏。"
+    },
+    "here": {
+        "message": "这里"
+    },
+    "retry": {
+        "message": "重试"
+    },
+    "ask": {
+        "message": "询问"
+    },
+    "generating": {
+        "message": "生成中..."
+    },
+    "thinking": {
+        "message": "思考中..."
+    },
+    "no_transcription": {
+        "message": "该视频无可用于总结的字幕文档..."
+    },
+    "use_openai_tip": {
+        "message": "注：使用OpenAI API密钥模式将提供更准确的答案"
+    },
+    "no_results": {
+        "message": "Glarity无法获取当前页面内容。请检查网站的安全设置或 刷新页面重新尝试。"
+    },
+    "i_ready": {
+        "message": "已准备好！"
+    },
+    "keep_this_tip": {
+        "message": "保持此选项卡可以使ChatGPT更稳定。"
+    },
+    "login_chatGpt_tip": {
+        "message": "登录ChatGPT网站使用Glarity摘要"
+    },
+    "disable_pop_tip": {
+        "message": "您确定要禁用弹出摘要吗？"
+    },
+    "page_not_supported": {
+        "message": "抱歉，暂不支持该页面"
+    },
+    "content": {
+        "message": "内容"
+    },
+    "ask_chatGPT": {
+        "message": "生成总结"
+    },
+    "pop_tip": {
+        "message": "您可以在选项中启用它 弹出摘要。"
+    },
+    "asking_tip": {
+        "message": "Glarity正在生成与关键词相关的问题"
+    },
+    "data_error": {
+        "message": "数据错误"
+    },
+    "gpt_401": {
+        "message": "加载响应失败，请检查API密钥。"
+    },
+    "chat_tip": {
+        "message": "注：询问功能可能会消耗较多Key额度~"
+    },
+    "three_point": {
+        "message": "3个要点"
+    },
+    "ask_page_placeholder": {
+        "message": "向Glarity提出您的问题"
+    },
+    "ask_video_placeholder": {
+        "message": "向Glarity提出您的问题"
+    },
+    "ask_docment_placeholder": {
+        "message": "向Glarity提出您的问题"
+    },
+    "stop": {
+        "message": "停止"
+    },
+    "comment_summary_tip": {
+        "message": "对亚马逊产品和YouTube视频评论的支持摘要。"
+    },
+    "faq_about": {
+        "message": "询问当前视频"
+    },
+    "ai_chapter": {
+        "message": "AI章节"
+    },
+    "beta": {
+        "message": "测试版"
+    },
+    "how_to_use": {
+        "message": "如何随时使用Glarity总结"
+    },
+    "three_ways_to_access": {
+        "message": "为了确保Glarity总结对每个人都可愉快使用，Glarity提供了3种链接ChatGPT/OpenAI的方式。"
+    },
+    "have_chatpgt_account": {
+        "message": "当你拥有ChatGPT账户时"
+    },
+    "chatgpt_use_desc": {
+        "message": "你必须保持登录到ChatGPT账户的网站上。由于OpenAI的限制，Plus用户和免费用户稳定性并不一致。推荐ChatGPT Plus用户使用。"
+    },
+    "have_openai_key": {
+        "message": "对于拥有API密钥的开发者"
+    },
+    "openai_use_desc": {
+        "message": "官方的OpenAI API更稳定，并且收费是基于使用量的。请按照指南获取API密钥。"
+    },
+    "have_azure_key": {
+        "message": "对于拥有Azure API密钥的开发者"
+    },
+    "azure_use_desc": {
+        "message": "利用Azure OpenAI服务的研发工程师可以获得更稳定的服务。"
+    },
+    "more_ways": {
+        "message": "更多方式+"
+    },
+    "chatgpt_default_model": {
+        "message": "默认"
+    },
+    "chatgpt_default_desc": {
+        "message": "对于免费用户和Plus用户，默认是无限制的。"
+    },
+    "chatgpt_gpt4_model": {
+        "message": "GPT-4"
+    },
+    "chatgpt_gpt4_desc": {
+        "message": "GPT-4适用于Plus用户，并且有非常有限的配额。"
+    },
+    "changes_saved": {
+        "message": "更改已保存"
+    },
+    "token_exceeds_limit_toast": {
+        "message": "抱歉，指令token超过了限制，请尝试将其翻译为英文并保存，或者减少字数。"
+    },
+    "guide_title": {
+        "message": "欢迎使用Glarity"
+    },
+    "guide_desc": {
+        "message": "马上体验Glarity的高效总结~~"
+    },
+    "google_search": {
+        "message": "谷歌搜索"
+    },
+    "youtube_video": {
+        "message": "YouTube视频"
+    },
+    "translation_languages": {
+        "message": "翻译语言"
+    },
+    "recently_used": {
+        "message": "最近使用"
+    },
+    "copy_success": {
+        "message": "复制成功"
+    },
+    "free_queries": {
+        "message": "免费次数：$count$次",
+        "placeholders": {
+            "count": {
+                "content": "$1",
+                "example": "1"
+            }
+        }
+    },
+    "enter_openai_key_toast": {
+        "message": "请输入你的OpenAI API密钥"
+    },
+    "free_quota_exhausted": {
+        "message": "免费次数已用完了~"
+    },
+    "login_chatgpt_and_refresh_page": {
+        "message": "请登录ChatGPT并刷新此页面"
+    },
+    "goto_chatgpt": {
+        "message": "前往ChatGPT登录"
+    },
+    "use_openai_enhanced": {
+        "message": "使用OpenAI API密钥获取更好的总结体验"
+    },
+    "find_create_openai_key": {
+        "message": "你可以在这里找到或创建你的API密钥"
+    },
+    "change_openai_api": {
+        "message": "如果这种情况持续发生，请将扩展设置里的AI提供商更改为OpenAI API。"
+    },
+    "goto_options": {
+        "message": "前往编辑选项"
+    },
+    "ai_not_responding": {
+        "message": "AI无响应"
+    },
+    "select_valid_model": {
+        "message": "请选择一个有效的模型"
+    },
+    "enter_azure_key": {
+        "message": "请输入你的Azure API密钥"
+    },
+    "enter_azure_endpoint": {
+        "message": "请输入你的Azure终结点"
+    },
+    "enter_azure_name": {
+        "message": "请输入你的Azure部署名称"
+    },
+    "enter_claude_key": {
+        "message": "请输入你的Claude API密钥"
+    },
+    "transcript": {
+        "message": "视频字幕"
+    },
+    "or": {
+        "message": "或"
+    },
+    "back": {
+        "message": "返回"
+    },
+    "aiAskYoutubeTip": {
+        "message": "Glarity正在预测您感兴趣的问题"
+    },
+    "clickOpen": {
+        "message": "展开"
+    },
+    "clickClose": {
+        "message": "收起"
+    },
+    "tips": {
+        "message": "提示"
+    },
+    "confirm": {
+        "message": "确认"
+    },
+    "cancel": {
+        "message": "取消"
+    },
+    "have_glarity": {
+    "message": "推荐所有用户使用"
+    },
+    "glarity_use_desc": {
+    "message": "Glarity采用多个AI模型，为您提供卓越的AI辅助服务。"
+    },
+    "glarity_not_use_desc": {
+    "message": "Glarity利用多种AI模型提供先进的AI辅助服务。每月享受 $size$ 免费Token，为所有人提供AI的力量。<br/> <a href='$link$' target='_blank' rel='noopener noreferrer'>升级到 $plan$ </a> 以获得更大的Token额度和高级功能。",
+    "placeholders": {
+        "size": {
+        "content": "$1",
+        "example": "1"
+        },
+        "plan": {
+        "content": "$2",
+        "example": "Pro"
+        },
+        "link": {
+        "content": "$3",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "my_account": {
+    "message": "我的帐户"
+    },
+    "sign_out": {
+    "message": "退出"
+    },
+    "sign_in": {
+    "message": "登录"
+    },
+    "upgrade_now": {
+    "message": "立即升级"
+    },
+    "go_plus": {
+    "message": "Go Plus"
+    },
+    "basic": {
+    "message": "Basic"
+    },
+    "pro": {
+    "message": "Pro"
+    },
+    "plus": {
+    "message": "Plus"
+    },
+    "unlimited": {
+    "message": "无限版"
+    },
+    "glarity_words_size": {
+    "message": "$size$ k Token可用",
+    "placeholders": {
+        "size": {
+        "content": "$1",
+        "example": "1"
+        }
+    }
+    },
+    "glarity_unlimited_words": {
+    "message": "无限Token"
+    },
+    "settings": {
+    "message": "设置"
+    },
+    "support": {
+    "message": "支持"
+    },
+    "login": {
+    "message": "登录"
+    },
+    "log_out": {
+    "message": "退出"
+    },
+    "subscribe": {
+    "message": "订阅"
+    },
+    "hasLogin_isFree_title": {
+    "message": "免费用量已用完"
+    },
+    "hasLogin_isFree_text": {
+    "message": "升级您的计划以获取更多额度"
+    },
+    "hasLogin_noFree_title": {
+    "message": "您的额度已全部使用完"
+    },
+    "hasLogin_noFree_text": {
+    "message": "升级您的计划以获取更多额度"
+    },
+    "noLogin_title": {
+    "message": "免费额度已用完"
+    },
+    "noLogin_text": {
+    "message": "登录后继续免费使用Glarity"
+    },
+    "chat_quota_used_up_not_login": {
+    "message": "您的额度已用完。 <br /> <a href='$link$'>登录</a> 到Glarity以继续享受您的免费体验",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "chat_quota_used_up_free_plan": {
+    "message": "您的免费额度已用完。 <br /> <a href='$link$'>立即升级您的计划</a> 以获得更多额度",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "chat_quota_used_up_limited_plan": {
+    "message": "您的计划额度已用完。 <br /> <a href='$link$'>立即升级您的计划</a> 以获取更多额度",
+    "placeholders": {
+        "link": {
+        "content": "$1",
+        "example": "https://glarity.com"
+        }
+    }
+    },
+    "more": {
+    "message": "更多"
+    },
+    "is_login_expires_text": {
+    "message": "登录Glarity即可使用~"
+    },
+    "is_login_expires_tip": {
+    "message": "若您已有ChatGPT帐户，您可以<a id='glarity-error-guide-to-options'>切换到ChatGPT模式免费使用。</a>"
+    },
+    "sign_in_now":{
+        "message":"立即登录"
+    }
+
+}

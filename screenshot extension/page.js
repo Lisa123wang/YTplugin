@@ -8,85 +8,69 @@ var screenshotFormat = "png";
 var extension = 'png';
 
 function CaptureScreenshot() {
-
-	var appendixTitle = "screenshot." + extension;
-
-	var title;
-
-	var headerEls = document.querySelectorAll("h1.title.ytd-video-primary-info-renderer");
-
-	function SetTitle() {
-		if (headerEls.length > 0) {
-			title = headerEls[0].innerText.trim();
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	if (SetTitle() == false) {
-		headerEls = document.querySelectorAll("h1.watch-title-container");
-
-		if (SetTitle() == false)
-			title = '';
+	var player = document.querySelector('video');
+	if (!player) {
+		console.log("No video player found.");
+		return;
 	}
 
-	var player = document.getElementsByClassName("video-stream")[0];
-
-	var time = player.currentTime;
-
-	title += " ";
-
-	let minutes = Math.floor(time / 60)
-
-	time = Math.floor(time - (minutes * 60));
-
-	if (minutes > 60) {
-		let hours = Math.floor(minutes / 60)
-		minutes -= hours * 60;
-		title += hours + "-";
-	}
-
-	title += minutes + "-" + time;
-
-	title += " " + appendixTitle;
-
-	var canvas = document.createElement("canvas");
+	var canvas = document.createElement('canvas');
 	canvas.width = player.videoWidth;
 	canvas.height = player.videoHeight;
-	canvas.getContext('2d').drawImage(player, 0, 0, canvas.width, canvas.height);
+	var ctx = canvas.getContext('2d');
+	ctx.drawImage(player, 0, 0, canvas.width, canvas.height);
+	var dataURL = canvas.toDataURL('image/png');
 
-	var downloadLink = document.createElement("a");
-	downloadLink.download = title;
+	// Ensure the container is ready and get it
+	updateScreenshotContainer();
+	var container = document.getElementById('customScreenshotContainer');
 
-	function DownloadBlob(blob) {
-		downloadLink.href = URL.createObjectURL(blob);
-		downloadLink.click();
+	// Create a wrapper div for styling and grouping
+	var imgWrapper = document.createElement('div');
+	imgWrapper.style.marginBottom = '10px';
+
+	// Create an image element to display the screenshot
+	var img = new Image();
+	img.src = dataURL;
+	img.style.width = '100%'; // Adjust width as needed
+	img.style.display = 'block'; // Ensure each image is on a new line
+	img.style.cursor = 'pointer';
+	imgWrapper.appendChild(img);
+
+	// Add a click event to remove the screenshot on click
+	img.addEventListener('click', function () {
+		imgWrapper.parentNode.removeChild(imgWrapper);
+	});
+
+	// Append the new screenshot to the container
+	container.appendChild(imgWrapper);
+}
+
+function updateScreenshotContainer() {
+	let target = document.getElementById('secondary'); // YouTube's right-hand column ID
+	if (!target) {
+		console.log("YouTube secondary column not found.");
+		return;
 	}
 
-	async function ClipboardBlob(blob) {
-		const clipboardItemInput = new ClipboardItem({ "image/png": blob });
-		await navigator.clipboard.write([clipboardItemInput]);
-	}
-
-	// If clipboard copy is needed generate png (clipboard only supports png)
-	if (screenshotFunctionality == 1 || screenshotFunctionality == 2) {
-		canvas.toBlob(async function (blob) {
-			await ClipboardBlob(blob);
-			// Also download it if it's needed and it's in the correct format
-			if (screenshotFunctionality == 2 && screenshotFormat === 'png') {
-				DownloadBlob(blob);
-			}
-		}, 'image/png');
-	}
-
-	// Create and download image in the selected format if needed
-	if (screenshotFunctionality == 0 || (screenshotFunctionality == 2 && screenshotFormat !== 'png')) {
-		canvas.toBlob(async function (blob) {
-			DownloadBlob(blob);
-		}, 'image/' + screenshotFormat);
+	let container = document.getElementById('customScreenshotContainer');
+	if (!container) {
+		container = document.createElement('div');
+		container.id = 'customScreenshotContainer';
+		container.style.maxWidth = '350px'; // Adjust based on YouTube's current design
+		container.style.marginTop = '16px';
+		container.innerHTML = '<h3>My Screenshots</h3>'; // Example title, style as needed
+		target.insertBefore(container, target.firstChild); // Insert at the top of the right-hand column
 	}
 }
+
+// To ensure the container is initialized and monitored for YouTube's dynamic content changes,
+// include the observeYouTubeChanges function from the previous example here.
+
+// Example usage (you might call this function on a button click or key press event)
+// CaptureScreenshot();
+
+
 
 function AddScreenshotButton() {
 	var ytpRightControls = document.getElementsByClassName("ytp-right-controls")[0];

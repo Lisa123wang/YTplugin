@@ -44,6 +44,84 @@ function CaptureScreenshot() {
 
 	// Append the new screenshot to the container
 	container.appendChild(imgWrapper);
+	//download
+	var appendixTitle = "screenshot." + extension;
+
+	var title;
+
+	var headerEls = document.querySelectorAll("h1.title.ytd-video-primary-info-renderer");
+
+	function SetTitle() {
+		if (headerEls.length > 0) {
+			title = headerEls[0].innerText.trim();
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	if (SetTitle() == false) {
+		headerEls = document.querySelectorAll("h1.watch-title-container");
+
+		if (SetTitle() == false)
+			title = '';
+	}
+
+	var player = document.getElementsByClassName("video-stream")[0];
+
+	var time = player.currentTime;
+
+	title += " ";
+
+	let minutes = Math.floor(time / 60)
+
+	time = Math.floor(time - (minutes * 60));
+
+	if (minutes > 60) {
+		let hours = Math.floor(minutes / 60)
+		minutes -= hours * 60;
+		title += hours + "-";
+	}
+
+	title += minutes + "-" + time;
+
+	title += " " + appendixTitle;
+
+	var canvas = document.createElement("canvas");
+	canvas.width = player.videoWidth;
+	canvas.height = player.videoHeight;
+	canvas.getContext('2d').drawImage(player, 0, 0, canvas.width, canvas.height);
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = title;
+
+	function DownloadBlob(blob) {
+		downloadLink.href = URL.createObjectURL(blob);
+		downloadLink.click();
+	}
+
+	async function ClipboardBlob(blob) {
+		const clipboardItemInput = new ClipboardItem({ "image/png": blob });
+		await navigator.clipboard.write([clipboardItemInput]);
+	}
+
+	// If clipboard copy is needed generate png (clipboard only supports png)
+	if (screenshotFunctionality == 1 || screenshotFunctionality == 2) {
+		canvas.toBlob(async function (blob) {
+			await ClipboardBlob(blob);
+			// Also download it if it's needed and it's in the correct format
+			if (screenshotFunctionality == 2 && screenshotFormat === 'png') {
+				DownloadBlob(blob);
+			}
+		}, 'image/png');
+	}
+
+	// Create and download image in the selected format if needed
+	if (screenshotFunctionality == 0 || (screenshotFunctionality == 2 && screenshotFormat !== 'png')) {
+		canvas.toBlob(async function (blob) {
+			DownloadBlob(blob);
+		}, 'image/' + screenshotFormat);
+	}
 }
 
 function updateScreenshotContainer() {

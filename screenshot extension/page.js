@@ -59,7 +59,7 @@ function updateScreenshotContainer() {
 		container.id = 'customScreenshotContainer';
 		container.style.maxWidth = '350px'; // Adjust based on YouTube's current design
 		container.style.marginTop = '16px';
-		container.innerHTML = '<h3>My Screenshots</h3>'; // Example title, style as needed
+		container.innerHTML = '<h3 style="color:white">My Screenshots</h3>'; // Example title, style as needed
 		target.insertBefore(container, target.firstChild); // Insert at the top of the right-hand column
 	}
 }

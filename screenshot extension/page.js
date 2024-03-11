@@ -47,28 +47,32 @@ function CaptureScreenshot() {
 	// Create a flex container for image and caption
 	var flexContainer = document.createElement('div');
 	flexContainer.style.display = 'flex';
-	flexContainer.style.alignItems = 'center';
+	flexContainer.style.flexDirection = 'column'; // Changed to column to stack caption below the image
+	flexContainer.style.alignItems = 'left';
 
 	var img = new Image();
 	img.src = dataURL;
-	img.style.maxWidth = '70%'; // Adjust image size as necessary
+	img.style.maxWidth = '100%'; // Adjust image size as necessary
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
 
 	// Text section for captions or any additional information
 	var textSection = document.createElement('div');
 	textSection.style.flex = '1'; // Take up the remaining space
-	textSection.style.marginLeft = '10px'; // Add some space between the image and text
+	textSection.style.marginLeft = '1px'; // Add some space between the image and text
 
 	// Example of adding some text, can be replaced with dynamic content
 	var captionText = document.createElement('p');
 	captionText.innerText = "Your caption here";
 	captionText.style.color = 'white'; // Adjust the styling as needed
+	captionText.style.textAlign = 'left'; // Align caption text to the left
 	textSection.appendChild(captionText);
 
-	// Append image and text section to the flex container
+
+	// Append image to the flex container
 	flexContainer.appendChild(img);
-	flexContainer.appendChild(textSection);
+	// Append the caption text below the image
+	flexContainer.appendChild(captionText);
 
 	// Append the flex container to the wrapper
 	imgWrapper.appendChild(flexContainer);
@@ -83,6 +87,7 @@ function CaptureScreenshot() {
 
 
 
+
 function updateScreenshotContainer() {
 	let target = document.getElementById('secondary');
 	if (!target) {
@@ -94,7 +99,7 @@ function updateScreenshotContainer() {
 	if (!container) {
 		container = document.createElement('div');
 		container.id = 'customScreenshotContainer';
-		container.style.maxWidth = '350px';
+		container.style.maxWidth = '500px';
 		container.style.marginTop = '16px';
 		container.innerHTML = '<h3 style="color:white">My Screenshots</h3>';
 		target.insertBefore(container, target.firstChild);

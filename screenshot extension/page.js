@@ -30,6 +30,9 @@ function CaptureScreenshot() {
 	ctx.drawImage(player, 0, 0, canvas.width, canvas.height);
 	var dataURL = canvas.toDataURL('image/png');
 
+	// Trigger download
+	triggerDownload(dataURL);
+
 	updateScreenshotContainer();
 	var container = document.getElementById('customScreenshotContainer');
 
@@ -93,7 +96,22 @@ emp_2 = Employee('Test', 'User', 60000)
 	container.appendChild(imgWrapper);
 }
 
+function triggerDownload(dataURL) {
+	var downloadLink = document.createElement('a');
+	downloadLink.href = dataURL; // Set href to the data URL
+	downloadLink.download = 'screenshot_' + getFormattedDate() + '.png'; // Set the download filename
 
+	// This part is important for triggering the download
+	document.body.appendChild(downloadLink);
+	downloadLink.click();
+	document.body.removeChild(downloadLink); // Remove the link when done
+}
+
+function getFormattedDate() {
+	var now = new Date();
+	return now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '_' +
+		now.getHours() + '-' + now.getMinutes() + '-' + now.getSeconds();
+}
 
 
 

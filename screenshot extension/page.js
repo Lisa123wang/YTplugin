@@ -119,10 +119,10 @@ emp_2 = Employee('Test', 'User', 60000)
 
 	var player = document.getElementsByClassName("video-stream")[0];
 
-	var time = player.currentTime;
+	//var time = player.currentTime;
 
 	title += " ";
-
+	/*
 	let minutes = Math.floor(time / 60)
 
 	time = Math.floor(time - (minutes * 60));
@@ -132,7 +132,7 @@ emp_2 = Employee('Test', 'User', 60000)
 		minutes -= hours * 60;
 		title += hours + "-";
 	}
-
+	*/
 	title += currentTime ;
 
 	title += " " + appendixTitle;

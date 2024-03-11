@@ -133,7 +133,7 @@ emp_2 = Employee('Test', 'User', 60000)
 		title += hours + "-";
 	}
 
-	title += minutes + "-" + time;
+	title += currentTime ;
 
 	title += " " + appendixTitle;
 

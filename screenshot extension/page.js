@@ -34,53 +34,42 @@ function CaptureScreenshot() {
 	var container = document.getElementById('customScreenshotContainer');
 
 	var imgWrapper = document.createElement('div');
-	imgWrapper.style.marginBottom = '10px';
-
-	// Create a text element for the time record
-	var timeText = document.createElement('p');
-	var currentTime = formatTime(player.currentTime); // Assuming formatTime function is defined as before
-	timeText.innerText = "Time: " + currentTime;
-	timeText.style.color = 'white'; // Ensure the text is visible on your background
-	timeText.style.textAlign = 'left'; // Center the time above the image
-	imgWrapper.appendChild(timeText); // Append the time record above the image
-
-	// Create a flex container for image and caption
-	var flexContainer = document.createElement('div');
-	flexContainer.style.display = 'flex';
-	flexContainer.style.flexDirection = 'column'; // Changed to column to stack caption below the image
-	flexContainer.style.alignItems = 'left';
+	imgWrapper.style.marginBottom = '20px'; // Space between this and next image wrapper
 
 	var img = new Image();
 	img.src = dataURL;
-	img.style.maxWidth = '100%'; // Adjust image size as necessary
+	img.style.maxWidth = '90%';
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
+	imgWrapper.appendChild(img);
 
-	// Text section for captions or any additional information
-	var textSection = document.createElement('div');
-	textSection.style.flex = '1'; // Take up the remaining space
-	textSection.style.marginLeft = '1px'; // Add some space between the image and text
+	// Caption section
+	var captionSection = document.createElement('div');
+	captionSection.style.border = '1px solid white'; // Style the border as needed
+	captionSection.style.marginTop = '10px';
+	captionSection.style.padding = '10px';
 
-	// Example of adding some text, can be replaced with dynamic content
 	var captionText = document.createElement('p');
 	captionText.innerText = "Your caption here";
-	captionText.style.color = 'white'; // Adjust the styling as needed
-	captionText.style.textAlign = 'left'; // Align caption text to the left
-	textSection.appendChild(captionText);
+	captionText.style.color = 'white';
+	captionText.style.textAlign = 'left';
+	captionSection.appendChild(captionText);
 
+	imgWrapper.appendChild(captionSection);
 
-	// Append image to the flex container
-	flexContainer.appendChild(img);
-	// Append the caption text below the image
-	flexContainer.appendChild(captionText);
+	// OCR section
+	var ocrSection = document.createElement('div');
+	ocrSection.style.border = '1px solid white'; // Style the border as needed
+	ocrSection.style.marginTop = '10px';
+	ocrSection.style.padding = '10px';
 
-	// Append the flex container to the wrapper
-	imgWrapper.appendChild(flexContainer);
+	var ocrText = document.createElement('p');
+	ocrText.innerText = "OCR output here"; // Replace with actual OCR output
+	ocrText.style.color = 'white';
+	ocrText.style.textAlign = 'left';
+	ocrSection.appendChild(ocrText);
 
-	// Add event listener for removing on click
-	img.addEventListener('click', function () {
-		imgWrapper.parentNode.removeChild(imgWrapper);
-	});
+	imgWrapper.appendChild(ocrSection);
 
 	container.appendChild(imgWrapper);
 }

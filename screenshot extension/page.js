@@ -171,11 +171,10 @@ chrome.storage.sync.get(['screenshotKey', 'playbackSpeedButtons', 'screenshotFun
 
 document.addEventListener('keydown', function (e) {
 	// Key event listeners for playback speed adjustments and screenshot capture...
-
-	if (screenshotKey && e.key === 'p') {
+	// Check if Ctrl is pressed and the key is '6'
+	if (e.ctrlKey && e.key === '6') {
 		CaptureScreenshot();
-		e.preventDefault();
-		return false;
+		e.preventDefault(); // Prevent the default action of the key press
 	}
 });
 var screenshotButton = document.createElement("button");

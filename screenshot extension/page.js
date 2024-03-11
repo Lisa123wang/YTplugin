@@ -190,10 +190,34 @@ function updateScreenshotContainer() {
 		container.id = 'customScreenshotContainer';
 		container.style.maxWidth = '500px';
 		container.style.marginTop = '16px';
-		container.innerHTML = '<h3 style="color:white">My Screenshots</h3>';
+		var videoTitle = getVideoTitle();
+		container.innerHTML = `<h3 style="color:white">${videoTitle}</h3>`;
 		target.insertBefore(container, target.firstChild);
 	}
 }
+
+function getVideoTitle() {
+	var title;
+	var headerEls = document.querySelectorAll("h1.title.ytd-video-primary-info-renderer");
+
+	function SetTitle() {
+		if (headerEls.length > 0) {
+			title = headerEls[0].innerText.trim();
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	if (!SetTitle()) {
+		headerEls = document.querySelectorAll("h1.watch-title-container");
+
+		if (!SetTitle()) title = "Video Screenshot"; // Fallback title if none is found
+	}
+
+	return title;
+}
+
 
 // To ensure the container is initialized and monitored for YouTube's dynamic content changes,
 // include the observeYouTubeChanges function from the previous example here.

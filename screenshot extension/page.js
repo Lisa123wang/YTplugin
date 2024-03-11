@@ -36,46 +36,38 @@ function CaptureScreenshot() {
 	var imgWrapper = document.createElement('div');
 	imgWrapper.style.marginBottom = '20px'; // Space between this and next image wrapper
 
-	// Create a text element for the time record
 	var timeText = document.createElement('p');
-	var currentTime = formatTime(player.currentTime); // Assuming formatTime function is defined as before
+	var currentTime = formatTime(player.currentTime);
 	timeText.innerText = "Time: " + currentTime;
-	timeText.style.color = 'white'; // Ensure the text is visible on your background
-	timeText.style.textAlign = 'left'; // Center the time above the image
-	imgWrapper.appendChild(timeText); // Append the time record above the image
+	timeText.style.color = 'white';
+	timeText.style.textAlign = 'left';
+	imgWrapper.appendChild(timeText);
 
 	var img = new Image();
 	img.src = dataURL;
 	img.style.maxWidth = '90%';
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
+	// Set the alt attribute to the image caption
+	img.alt = "Screenshot of a Python program running in PyScripter, showing a class definition and instantiation.";
 	imgWrapper.appendChild(img);
 
-	
-
-	// Caption section
 	var captionSection = document.createElement('div');
-	captionSection.style.border = '1px solid white'; // Style the border as needed
+	captionSection.style.border = '1px solid white';
 	captionSection.style.marginTop = '10px';
 	captionSection.style.padding = '10px';
 
-	var captionText = document.createElement('p');
-	captionText.innerText = "The image you sent is a screenshot of a Python program running in PyScripter, a cross-platform IDE. The program is written in Python, a general-purpose programming language that is popular for its readability and ease of use.";
-	captionText.style.color = 'white';
-	captionText.style.textAlign = 'left';
-	captionSection.appendChild(captionText);
+	// Instead of appending the captionText to the captionSection, use it as an alt attribute for the image
+	// Therefore, this section can now be used for any additional information or removed if not needed
 
-	imgWrapper.appendChild(captionSection);
-
-	// OCR section
 	var ocrSection = document.createElement('div');
-	ocrSection.style.border = '1px solid white'; // Style the border as needed
+	ocrSection.style.border = '1px solid white';
 	ocrSection.style.marginTop = '10px';
 	ocrSection.style.padding = '10px';
-	ocrSection.style.backgroundColor = '#282c34'; // Dark background for code visibility
-	ocrSection.style.color = '#abb2bf'; // Light font color for contrast
-	ocrSection.style.fontFamily = 'Consolas, "Courier New", monospace'; // Monospaced font for code
-	ocrSection.style.whiteSpace = 'pre'; // Preserve formatting of the code
+	ocrSection.style.backgroundColor = '#282c34';
+	ocrSection.style.color = '#abb2bf';
+	ocrSection.style.fontFamily = 'Consolas, "Courier New", monospace';
+	ocrSection.style.whiteSpace = 'pre';
 
 	var ocrTextContent = `
 class Employee:
@@ -88,7 +80,6 @@ class Employee:
     def fullName(self):
         return '{} {}'.format(self.first, self.last)
 
-
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'User', 60000)
 `;
@@ -99,9 +90,9 @@ emp_2 = Employee('Test', 'User', 60000)
 
 	imgWrapper.appendChild(ocrSection);
 
-
 	container.appendChild(imgWrapper);
 }
+
 
 
 

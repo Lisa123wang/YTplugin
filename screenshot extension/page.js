@@ -41,22 +41,46 @@ function CaptureScreenshot() {
 	var currentTime = formatTime(player.currentTime); // Assuming formatTime function is defined as before
 	timeText.innerText = "Time: " + currentTime;
 	timeText.style.color = 'white'; // Ensure the text is visible on your background
-	timeText.style.textAlign = 'left'; // Left the time above the image
+	timeText.style.textAlign = 'left'; // Center the time above the image
 	imgWrapper.appendChild(timeText); // Append the time record above the image
+
+	// Create a flex container for image and caption
+	var flexContainer = document.createElement('div');
+	flexContainer.style.display = 'flex';
+	flexContainer.style.alignItems = 'center';
 
 	var img = new Image();
 	img.src = dataURL;
-	img.style.width = '100%';
+	img.style.maxWidth = '70%'; // Adjust image size as necessary
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
-	imgWrapper.appendChild(img);
 
+	// Text section for captions or any additional information
+	var textSection = document.createElement('div');
+	textSection.style.flex = '1'; // Take up the remaining space
+	textSection.style.marginLeft = '10px'; // Add some space between the image and text
+
+	// Example of adding some text, can be replaced with dynamic content
+	var captionText = document.createElement('p');
+	captionText.innerText = "Your caption here";
+	captionText.style.color = 'white'; // Adjust the styling as needed
+	textSection.appendChild(captionText);
+
+	// Append image and text section to the flex container
+	flexContainer.appendChild(img);
+	flexContainer.appendChild(textSection);
+
+	// Append the flex container to the wrapper
+	imgWrapper.appendChild(flexContainer);
+
+	// Add event listener for removing on click
 	img.addEventListener('click', function () {
 		imgWrapper.parentNode.removeChild(imgWrapper);
 	});
 
 	container.appendChild(imgWrapper);
 }
+
 
 
 function updateScreenshotContainer() {

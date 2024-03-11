@@ -41,7 +41,7 @@ function CaptureScreenshot() {
 	var currentTime = formatTime(player.currentTime); // Assuming formatTime function is defined as before
 	timeText.innerText = "Time: " + currentTime;
 	timeText.style.color = 'white'; // Ensure the text is visible on your background
-	timeText.style.textAlign = 'center'; // Center the text above the image
+	timeText.style.textAlign = 'left'; // Left the time above the image
 	imgWrapper.appendChild(timeText); // Append the time record above the image
 
 	var img = new Image();

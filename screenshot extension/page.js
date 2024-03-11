@@ -50,7 +50,7 @@ function CaptureScreenshot() {
 	captionSection.style.padding = '10px';
 
 	var captionText = document.createElement('p');
-	captionText.innerText = "Your caption here";
+	captionText.innerText = "The image you sent is a screenshot of a Python program running in PyScripter, a cross-platform IDE. The program is written in Python, a general-purpose programming language that is popular for its readability and ease of use.";
 	captionText.style.color = 'white';
 	captionText.style.textAlign = 'left';
 	captionSection.appendChild(captionText);
@@ -62,14 +62,33 @@ function CaptureScreenshot() {
 	ocrSection.style.border = '1px solid white'; // Style the border as needed
 	ocrSection.style.marginTop = '10px';
 	ocrSection.style.padding = '10px';
+	ocrSection.style.backgroundColor = '#282c34'; // Dark background for code visibility
+	ocrSection.style.color = '#abb2bf'; // Light font color for contrast
+	ocrSection.style.fontFamily = 'Consolas, "Courier New", monospace'; // Monospaced font for code
+	ocrSection.style.whiteSpace = 'pre'; // Preserve formatting of the code
+
+	var ocrTextContent = `
+class Employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+
+    def fullName(self):
+        return '{} {}'.format(self.first, self.last)
+
+
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'User', 60000)
+`;
 
 	var ocrText = document.createElement('p');
-	ocrText.innerText = "OCR output here"; // Replace with actual OCR output
-	ocrText.style.color = 'white';
-	ocrText.style.textAlign = 'left';
+	ocrText.innerText = ocrTextContent.trim();
 	ocrSection.appendChild(ocrText);
 
 	imgWrapper.appendChild(ocrSection);
+
 
 	container.appendChild(imgWrapper);
 }

@@ -36,12 +36,22 @@ function CaptureScreenshot() {
 	var imgWrapper = document.createElement('div');
 	imgWrapper.style.marginBottom = '20px'; // Space between this and next image wrapper
 
+	// Create a text element for the time record
+	var timeText = document.createElement('p');
+	var currentTime = formatTime(player.currentTime); // Assuming formatTime function is defined as before
+	timeText.innerText = "Time: " + currentTime;
+	timeText.style.color = 'white'; // Ensure the text is visible on your background
+	timeText.style.textAlign = 'left'; // Center the time above the image
+	imgWrapper.appendChild(timeText); // Append the time record above the image
+
 	var img = new Image();
 	img.src = dataURL;
 	img.style.maxWidth = '90%';
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
 	imgWrapper.appendChild(img);
+
+	
 
 	// Caption section
 	var captionSection = document.createElement('div');

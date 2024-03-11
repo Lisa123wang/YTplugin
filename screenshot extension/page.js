@@ -45,7 +45,7 @@ function CaptureScreenshot() {
 
 	var img = new Image();
 	img.src = dataURL;
-	img.style.maxWidth = '90%';
+	img.style.maxWidth = '100%';
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';
 	// Set the alt attribute to the image caption

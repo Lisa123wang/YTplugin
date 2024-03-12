@@ -45,7 +45,7 @@ function CaptureScreenshot() {
 	timeText.style.color = 'white';
 	timeText.style.textAlign = 'left';
 	imgWrapper.appendChild(timeText);
-
+	/*
 	var img = new Image();
 	img.src = dataURL;
 	img.style.maxWidth = '100%';
@@ -53,6 +53,30 @@ function CaptureScreenshot() {
 	img.style.cursor = 'pointer';
 	// Set the alt attribute to the image caption
 	img.alt = "Screenshot of a Python program running in PyScripter, showing a class definition and instantiation.";
+	*/
+	//img open ai api
+	var img = new Image();
+	img.src = dataURL;
+	img.style.maxWidth = '100%';
+	img.style.display = 'block';
+	img.style.cursor = 'pointer';
+
+	// Placeholder function to get caption from OpenAI API
+	async function getCaptionForImage(imageData) {
+		// This is a placeholder for making an API call to your server, which then calls OpenAI's API.
+		// The function should return a caption based on the image data provided.
+		// Example: return fetch('/api/generate-caption', { method: 'POST', body: JSON.stringify({ imageData })})
+		//             .then(response => response.text());
+		return "Generated caption based on the image.";
+	}
+
+	// Use the async function to set the alt attribute dynamically
+	getCaptionForImage(dataURL).then(caption => {
+		img.alt = caption;
+	});
+
+
+
 	imgWrapper.appendChild(img);
 
 	var captionSection = document.createElement('div');
@@ -72,24 +96,23 @@ function CaptureScreenshot() {
 	ocrSection.style.fontFamily = 'Consolas, "Courier New", monospace';
 	ocrSection.style.whiteSpace = 'pre';
 
-	var ocrTextContent = `
-class Employee:
-    def __init__(self, first, last, pay):
-        self.first = first
-        self.last = last
-        self.pay = pay
-        self.email = first + '.' + last + '@company.com'
+	// Placeholder function to get OCR text from an image
+	async function getOcrTextFromImage(imageData) {
+		// This is a placeholder for making an API call to your server, which then calls an OCR API.
+		// The function should return extracted text based on the image data provided.
+		// Example: return fetch('/api/extract-text', { method: 'POST', body: JSON.stringify({ imageData })})
+		//             .then(response => response.json())
+		//             .then(data => data.text);
+		return "Extracted text from the image.";
+	}
 
-    def fullName(self):
-        return '{} {}'.format(self.first, self.last)
+	// Use the async function to set the OCR text dynamically
+	getOcrTextFromImage(dataURL).then(ocrTextContent => {
+		var ocrText = document.createElement('p');
+		ocrText.innerText = ocrTextContent.trim();
+		ocrSection.appendChild(ocrText);
+	});
 
-emp_1 = Employee('Corey', 'Schafer', 50000)
-emp_2 = Employee('Test', 'User', 60000)
-`;
-
-	var ocrText = document.createElement('p');
-	ocrText.innerText = ocrTextContent.trim();
-	ocrSection.appendChild(ocrText);
 
 	imgWrapper.appendChild(ocrSection);
 

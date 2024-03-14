@@ -70,13 +70,50 @@ function CaptureScreenshot() {
 	img.style.cursor = 'pointer';
 
 	// Placeholder function to get caption from OpenAI API
-	async function getCaptionForImage(imageData) {
-		// This is a placeholder for making an API call to your server, which then calls OpenAI's API.
-		// The function should return a caption based on the image data provided.
-		// Example: return fetch('/api/generate-caption', { method: 'POST', body: JSON.stringify({ imageData })})
-		//             .then(response => response.text());
-		return "Generated caption based on the image.";
+	async function getCaptionForImage(imageSrc) {
+		// Dynamically extract the base64 part of the image source
+		const base64Data = imageSrc.split(",")[1]; // Splits the string at ',' and takes the second part, which is the base64 data.
+
+		// Headers for the request
+		const headers = {
+			"Content-Type": "application/json",
+			// Ensure the Authorization token is securely provided, especially if this code runs on the server side
+			'Authorization': 'Bearer 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'
+		};
+
+		// Construct the payload
+		const payload = {
+			model: "gpt-4-vision-preview",
+			prompt: "Describe this image",
+			attachments: [{
+				data: base64Data,
+				type: "image"
+			}]
+		};
+
+		try {
+			// Replace 'https://your.api.endpoint' with the actual API endpoint you're using
+			const response = await fetch('https://api.openai.com/v1/chat/completions', {
+				method: 'POST',
+				headers: headers,
+				body: JSON.stringify(payload),
+			});
+
+			if (!response.ok) {
+				throw new Error(`Network response was not ok: ${response.statusText}`);
+			}
+
+			const data = await response.json();
+
+			// Adjust based on actual API response structure. This example assumes a certain response format.
+			return data.choices[0].text;
+		} catch (error) {
+			console.error('Error fetching caption:', error);
+			return "Failed to generate caption due to an error.";
+		}
 	}
+
+
 
 	// Use the async function to set the alt attribute dynamically
 	getCaptionForImage(dataURL).then(caption => {

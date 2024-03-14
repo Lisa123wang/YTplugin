@@ -2,7 +2,7 @@ import base64
 import requests
 
 # OpenAI API Key
-api_key = "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"
+api_key = ""
 
 # Function to encode the image
 def encode_image(image_path):

@@ -28,7 +28,14 @@ function CaptureScreenshot() {
 	canvas.height = player.videoHeight;
 	var ctx = canvas.getContext('2d');
 	ctx.drawImage(player, 0, 0, canvas.width, canvas.height);
+	//var dataURL = canvas.toDataURL('image/png');
+	// Extract base64 data from the image
+	//const imgData = canvas.toDataURL('image/png').replace(/^data:image\/\w+;base64,/, "");
+	// Step 1 and 2: Convert canvas content to data URL
 	var dataURL = canvas.toDataURL('image/png');
+	// Step 3: Strip the data URL to only keep base64 encoded string
+	var base64Data = dataURL.replace(/^data:image\/\w+;base64,/, "");
+
 
 	
 	
@@ -56,7 +63,8 @@ function CaptureScreenshot() {
 	*/
 	//img open ai api
 	var img = new Image();
-	img.src = dataURL;
+	// Step 4: Assign the base64 data to the image source
+	img.src = "data:image/png;base64," + base64Data;
 	img.style.maxWidth = '100%';
 	img.style.display = 'block';
 	img.style.cursor = 'pointer';

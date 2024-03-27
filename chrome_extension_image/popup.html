@@ -3,10 +3,34 @@
 <head>
     <title>Send Image URL</title>
     <script src="popup.js"></script>
+    <style>
+        body, html {
+            width: 400px; /* Adjust the width as needed */
+            margin: 0;
+            padding: 0;
+        }
+        /* Add styles here for the modal if needed */
+        .modal-content {
+            width: 90%; /* Example to make modal content responsive within the popup */
+            max-width: 380px; /* Adjust according to the popup width */
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+        }
+    </style>
 </head>
 <body>
+    
     <h1>Send Image URL</h1>
     <input type="text" id="imageUrl" placeholder="Enter image URL">
     <button id="sendButton">Send</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalText">Server response will be shown here...</p>
+        </div>
+      </div>
 </body>
 </html>
